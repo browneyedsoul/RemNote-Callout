@@ -19,6 +19,6 @@ You can add a emoji in front of the Callout texts with simple `%%` typing
 
 ## Usage
 
-![1](public/1.png)
-![2](public/2.png)
-![3](public/3.png)
+![1](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/1.png)
+![2](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/2.png)
+![3](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/3.png)
