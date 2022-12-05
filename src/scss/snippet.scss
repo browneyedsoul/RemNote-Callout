@@ -3,12 +3,12 @@
     --callout-background-color-dark: #505050;
     --callout-text-color-dark: #DFDFD5;
     --callout-text-bold-color-dark: #FFF;
-    --calloutred-background-color: #FFE9EC;
+    --calloutred-background-color: #FFEEF0;
     --calloutred-background-color-dark: #572924;
     --calloutred-text-color: #721C25;
     --calloutred-text-color-dark: #FFD2CE;
     --calloutred-text-bold-color-dark: #FFEAE3;
-    --calloutorange-background-color: #FDEDD9;
+    --calloutorange-background-color: #FFF1DF;
     --calloutorange-background-color-dark: #553D24;
     --calloutorange-text-color: #572924;
     --calloutorange-text-color-dark: #FFDAB8;
@@ -18,7 +18,7 @@
     --calloutyellow-text-color: #454501;
     --calloutyellow-text-color-dark: #E8DDA7;
     --calloutyellow-text-bold-color-dark: #FFFECA;
-    --calloutgreen-background-color: #D5EED7;
+    --calloutgreen-background-color: #EBF2EC;
     --calloutgreen-background-color-dark: #253F27;
     --calloutgreen-text-color: #003E01;
     --calloutgreen-text-color-dark: #B3DDAB;
@@ -28,7 +28,7 @@
     --calloutblue-text-color: #00005B;
     --calloutblue-text-color-dark: #B5DEE8;
     --calloutblue-text-bold-color-dark: #DDFCFF;
-    --calloutpurple-background-color: #F1EEFE;
+    --calloutpurple-background-color: #F4F2FE;
     --calloutpurple-background-color-dark: #43273F;
     --calloutpurple-text-color: #3B004D;
     --calloutpurple-text-color-dark: #DDC3EB;
@@ -40,12 +40,6 @@
     --callout-margin-right: Œ;
     --callout-border-radius: 5px;
 }
-// Interim Measure
-    .rem-header--1:not(.document-title),
-    .rem-header--2:not(.document-title),
-    .rem-header--3:not(.document-title) {
-        color: unset;
-    }
 // Custom rem bullet Emoji
     [data-rem-tags~="callout"],
     [data-rem-tags~="calloutred"],
