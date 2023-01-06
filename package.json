@@ -1,7 +1,12 @@
 {
+  "author": {
+    "name" : "Min-Ki Park",
+    "email" : "contact@browneyedsoul.click",
+    "url" : "https://browneyedsoul.click/"
+  },
   "private": true,
-  "name": "remnote-plugin-template-react",
-  "version": "0.2.0",
+  "name": "remnote-callout",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "check-types": "tsc",
