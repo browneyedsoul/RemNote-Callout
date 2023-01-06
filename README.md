@@ -4,17 +4,18 @@ Decorate your important rem texts with a simple but aesthetic box!
 
 ## Available Tags
 
-|Color|Tag Name|Abbr. (Planned)|
-|---|---|---|
-|basic|`callout`|`cout`|
-|red|`calloutred`|`coutrd`|
-|orange|`calloutorange`|`coutor`|
-|yellow|`calloutyellow`|`coutyw`|
-|green|`calloutgreen`|`coutgr`|
-|blue|`calloutblue`|`coutbl`|
-|purple|`calloutpurple`|`coutvt`|
+|Color|Tag Name|
+|---|---|
+|basic|`callout` (color-convertible)|
+|red|`calloutred`|
+|orange|`calloutorange` |
+|yellow|`calloutyellow`|
+|green|`calloutgreen`|
+|blue|`calloutblue`|
+|purple|`calloutpurple`|
 
 ## Feature
+- "The basic `callout` tag can be color-converted to the highlight color.
 - Simple Tag entries like `callout`, `calloutred`, ... can make callout box
 - Also, You can add a emoji in front of the Callout texts with simple `%%` typing
 
