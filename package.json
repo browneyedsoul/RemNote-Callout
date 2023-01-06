@@ -6,7 +6,7 @@
   },
   "private": true,
   "name": "remnote-callout",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "scripts": {
     "check-types": "tsc",
