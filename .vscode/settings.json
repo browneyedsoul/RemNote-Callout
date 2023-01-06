@@ -1,6 +1,9 @@
 {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
+    "prettier.useTabs": false,
+    "prettier.printWidth": 120,
     "liveSassCompile.settings.formats": [
         {
             "extensionName": ".css",
