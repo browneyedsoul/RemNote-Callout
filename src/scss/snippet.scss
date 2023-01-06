@@ -1,63 +1,79 @@
 :root {
-    --callout-background-color: #F7F6F3;
-    --callout-background-color-dark: #505050;
-    --callout-text-color-dark: #DFDFD5;
-    --callout-text-bold-color-dark: #FFF;
-    --calloutred-background-color: #FFEEF0;
-    --calloutred-background-color-dark: #572924;
-    --calloutred-text-color: #721C25;
-    --calloutred-text-color-dark: #FFD2CE;
-    --calloutred-text-bold-color-dark: #FFEAE3;
-    --calloutorange-background-color: #FFF1DF;
-    --calloutorange-background-color-dark: #553D24;
-    --calloutorange-text-color: #572924;
-    --calloutorange-text-color-dark: #FFDAB8;
-    --calloutorange-text-bold-color-dark: #FFF0D6;
-    --calloutyellow-background-color: #FFF9DE;
-    --calloutyellow-background-color-dark: #453E1E;
-    --calloutyellow-text-color: #454501;
-    --calloutyellow-text-color-dark: #E8DDA7;
-    --calloutyellow-text-bold-color-dark: #FFFECA;
-    --calloutgreen-background-color: #EBF2EC;
-    --calloutgreen-background-color-dark: #253F27;
-    --calloutgreen-text-color: #003E01;
-    --calloutgreen-text-color-dark: #B3DDAB;
-    --calloutgreen-text-bold-color-dark: #DCFFD9;
-    --calloutblue-background-color: #E6F3F6;
-    --calloutblue-background-color-dark: #183C4D;
-    --calloutblue-text-color: #00005B;
-    --calloutblue-text-color-dark: #B5DEE8;
-    --calloutblue-text-bold-color-dark: #DDFCFF;
-    --calloutpurple-background-color: #F4F2FE;
-    --calloutpurple-background-color-dark: #43273F;
-    --calloutpurple-text-color: #3B004D;
-    --calloutpurple-text-color-dark: #DDC3EB;
-    --calloutpurple-text-bold-color-dark: #F6ECFF;
-    --callout-padding: 15px 20px;
-    --callout-margin-top: 7px;
-    --callout-margin-bottom: 7px;
-    --callout-margin-left: 24px;
-    --callout-margin-right: Œ;
-    --callout-border-radius: 5px;
+    --cout-bg: #F7F6F3;
+    --cout-bg-dark: #505050;
+    --cout-text: #000;
+    --cout-text-dark: #DFDFD5;
+    --cout-text-bold-dark: #FFF;
+    --cout-rd-bg: #FFEEF0;
+    --cout-rd-bg-dark: #4F201B;
+    --cout-rd-text: #721C25;
+    --cout-rd-text-dark: #FFD2CE;
+    --cout-rd-text-bold-dark: #F5DED6;
+    --cout-or-bg: #FFF1DF;
+    --cout-or-bg-dark: #48321B;
+    --cout-or-text: #572924;
+    --cout-or-text-dark: #FFDAB8;
+    --cout-or-text-bold-dark: #FFF1D3;
+    --cout-yw-bg: #FFF9DE;
+    --cout-yw-bg-dark: #403815;
+    --cout-yw-text: #454501;
+    --cout-yw-text-dark: #E8DDA7;
+    --cout-yw-text-bold-dark: #F1F2BA;
+    --cout-gr-bg: #EBF2EC;
+    --cout-gr-bg-dark: #253F27;
+    --cout-gr-text: #003E01;
+    --cout-gr-text-dark: #B3DDAB;
+    --cout-gr-text-bold-dark: #DCFFD9;
+    --cout-bl-bg: #EFF5F6;
+    --cout-bl-bg-dark: #133646;
+    --cout-bl-text: #00005B;
+    --cout-bl-text-dark: #B5DEE8;
+    --cout-bl-text-bold-dark: #D1EFF2;
+    --cout-vt-bg: #F4F2FE;
+    --cout-vt-bg-dark: #43273F;
+    --cout-vt-text: #3B004D;
+    --cout-vt-text-dark: #DDC3EB;
+    --cout-vt-text-bold-dark: #F6ECFF;
+    --cout-padding: 15px 20px;
+    --cout-margin-top: 7px;
+    --cout-margin-bottom: 7px;
+    --cout-margin-left: 24px;
+    --cout-margin-right: Œ;
+    --cout-border-radius: 5px;
 }
-// Custom rem bullet Emoji
-    [data-rem-tags~="callout"],
-    [data-rem-tags~="calloutred"],
-    [data-rem-tags~="calloutorange"],
-    [data-rem-tags~="calloutyellow"],
-    [data-rem-tags~="calloutgreen"],
-    [data-rem-tags~="calloutblue"],
-    [data-rem-tags~="calloutpurple"] {
-        .rem-text {
-            .EditorContainer {
-                [data-rem-tags~="emoji"] {
-                    span.emoji-powerup {
-                        position: absolute;
-                        left: -1.5rem;
-                        z-index: 0;
-                        pointer-events: none;
-                    }
-                }
+
+// Interim Measure
+    .rem-header--1:not(.document-title),
+    .rem-header--2:not(.document-title),
+    .rem-header--3:not(.document-title) {
+        color: unset;
+    }
+// Alignment
+    // Card Item Callout
+    .node-card-item[data-rem-container-tags~="callout"],
+    .node-card-item[data-rem-container-tags~="calloutred"],
+    .node-card-item[data-rem-container-tags~="calloutorange"],
+    .node-card-item[data-rem-container-tags~="calloutyellow"],
+    .node-card-item[data-rem-container-tags~="calloutgreen"],
+    .node-card-item[data-rem-container-tags~="calloutblue"],
+    .node-card-item[data-rem-container-tags~="calloutpurple"] {
+        &::before {
+            top: -10px;
+            left: -24px;
+            height: 130%;
+        }
+    }
+// Flashcard Preview
+    .spacedRepetitionAnswer {
+        .node-card-item {
+            &[data-rem-container-tags~="callout"],
+            &[data-rem-container-tags~="calloutred"],
+            &[data-rem-container-tags~="calloutorange"],
+            &[data-rem-container-tags~="calloutyellow"],
+            &[data-rem-container-tags~="calloutgreen"],
+            &[data-rem-container-tags~="calloutblue"],
+            &[data-rem-container-tags~="calloutpurple"] {
+                margin-left: var(--cout-margin-left);
             }
         }
     }
@@ -69,13 +85,16 @@
     [data-rem-container-tags~="calloutgreen"],
     [data-rem-container-tags~="calloutblue"],
     [data-rem-container-tags~="calloutpurple"] {
-        padding: var(--callout-padding);
-        margin-top: var(--callout-margin-top);
-        margin-bottom: var(--callout-margin-bottom);
-        margin-left: var(--callout-margin-left);
-        margin-right: var(--callout-margin-right);
-        border-radius: var(--callout-border-radius);
-
+        padding: var(--cout-padding);
+        margin-top: var(--cout-margin-top);
+        margin-bottom: var(--cout-margin-bottom);
+        margin-left: var(--cout-margin-left);
+        margin-right: var(--cout-margin-right);
+        border-radius: var(--cout-border-radius);
+        .six-dot,
+        .toggle-collapse-button {
+            background-color: unset !important;
+        }
         .EditorContainer {
             line-height: 180%;
         }
@@ -97,206 +116,11 @@
         .rem-button__container {
             margin-top: 6px;
         }
-    }
-    [data-rem-container-tags~="callout"] {
-        background-color: var(--callout-background-color);
-    }
-    [data-rem-container-tags~="calloutred"] {
-        color: var(--calloutred-text-color);
-        background-color: var(--calloutred-background-color);
-    }
-    [data-rem-container-tags~="calloutorange"] {
-        color: var(--calloutorange-text-color);
-        background-color: var(--calloutorange-background-color);
-    }
-    [data-rem-container-tags~="calloutyellow"] {
-        color: var(--calloutyellow-text-color);
-        background-color: var(--calloutyellow-background-color);
-    }
-    [data-rem-container-tags~="calloutgreen"] {
-        color: var(--calloutgreen-text-color);
-        background-color: var(--calloutgreen-background-color);
-    }
-    [data-rem-container-tags~="calloutblue"] {
-        color: var(--calloutblue-text-color);
-        background-color: var(--calloutblue-background-color);
-    }
-    [data-rem-container-tags~="calloutpurple"] {
-        color: var(--calloutpurple-text-color);
-        background-color: var(--calloutpurple-background-color);
-    }
-// Darkmode Compatibility
-    .dark {
-        [data-rem-container-tags~="callout"] {
-            background-color: var(--callout-background-color-dark);
-
-            .rem-text {
-                color: var(--callout-text-color-dark);
-
-                .bold {
-                    &:not(.highlight-color--red),
-                    &:not(.highlight-color--orange),
-                    &:not(.highlight-color--yellow),
-                    &:not(.highlight-color--green),
-                    &:not(.highlight-color--blue),
-                    &:not(.highlight-color--purple) {
-                        color: var(--callout-text-bold-color-dark) !important;
-                    }
-                }
-            }
-        }
-        [data-rem-container-tags~="calloutred"] {
-            background-color: var(--calloutred-background-color-dark);
-
-            .rem-text {
-                color: var(--calloutred-text-color-dark);
-
-                .bold {
-                    &:not(.highlight-color--red),
-                    &:not(.highlight-color--orange),
-                    &:not(.highlight-color--yellow),
-                    &:not(.highlight-color--green),
-                    &:not(.highlight-color--blue),
-                    &:not(.highlight-color--purple) {
-                        color: var(--calloutred-text-bold-color-dark) !important;
-                    }
-                }
-            }
-        }
-        [data-rem-container-tags~="calloutorange"] {
-            background-color: var(--calloutorange-background-color-dark);
-
-            .rem-text {
-                color: var(--calloutorange-text-color-dark);
-
-                .bold {
-                    &:not(.highlight-color--red),
-                    &:not(.highlight-color--orange),
-                    &:not(.highlight-color--yellow),
-                    &:not(.highlight-color--green),
-                    &:not(.highlight-color--blue),
-                    &:not(.highlight-color--purple) {
-                        color: var(--calloutorange-text-bold-color-dark) !important;
-                    }
-                }
-            }
-        }
-        [data-rem-container-tags~="calloutyellow"] {
-            background-color: var(--calloutyellow-background-color-dark);
-
-            .rem-text {
-                color: var(--calloutyellow-text-color-dark);
-
-                .bold {
-                    &:not(.highlight-color--red),
-                    &:not(.highlight-color--orange),
-                    &:not(.highlight-color--yellow),
-                    &:not(.highlight-color--green),
-                    &:not(.highlight-color--blue),
-                    &:not(.highlight-color--purple) {
-                        color: var(--calloutyellow-text-bold-color-dark) !important;
-                    }
-                }
-            }
-        }
-        [data-rem-container-tags~="calloutgreen"] {
-            background-color: var(--calloutgreen-background-color-dark);
-
-            .rem-text {
-                color: var(--calloutgreen-text-color-dark);
-
-                .bold {
-                    &:not(.highlight-color--red),
-                    &:not(.highlight-color--orange),
-                    &:not(.highlight-color--yellow),
-                    &:not(.highlight-color--green),
-                    &:not(.highlight-color--blue),
-                    &:not(.highlight-color--purple) {
-                        color: var(--calloutgreen-text-bold-color-dark) !important;
-                    }
-                }
-            }
-        }
-        [data-rem-container-tags~="calloutblue"] {
-            background-color: var(--calloutblue-background-color-dark);
-
-            .rem-text {
-                color: var(--calloutblue-text-color-dark);
-
-                .EditorContainer {
-                    .bold {
-                        &:not(.highlight-color--red),
-                        &:not(.highlight-color--orange),
-                        &:not(.highlight-color--yellow),
-                        &:not(.highlight-color--green),
-                        &:not(.highlight-color--blue),
-                        &:not(.highlight-color--purple) {
-                            color: var(--calloutblue-text-bold-color-dark) !important;
-                        }
-                    }
-                }
-            }
-        }
-        [data-rem-container-tags~="calloutpurple"] {
-            background-color: var(--calloutpurple-background-color-dark);
-
-            .rem-text {
-                color: var(--calloutpurple-text-color-dark);
-
-                .bold {
-                    &:not(.highlight-color--red),
-                    &:not(.highlight-color--orange),
-                    &:not(.highlight-color--yellow),
-                    &:not(.highlight-color--green),
-                    &:not(.highlight-color--blue),
-                    &:not(.highlight-color--purple) {
-                        color: var(--calloutpurple-text-bold-color-dark) !important;
-                    }
-                }
-            }
-        }
-    }
-// Alignment
-    // Card Item Callout
-        .node-card-item[data-rem-container-tags~="callout"],
-        .node-card-item[data-rem-container-tags~="calloutred"],
-        .node-card-item[data-rem-container-tags~="calloutorange"],
-        .node-card-item[data-rem-container-tags~="calloutyellow"],
-        .node-card-item[data-rem-container-tags~="calloutgreen"],
-        .node-card-item[data-rem-container-tags~="calloutblue"],
-        .node-card-item[data-rem-container-tags~="calloutpurple"] {
-            &::before {
-                top: -10px;
-                left: -24px;
-                height: 130%;
-            }
-        }
-    // Flashcard Preview
-        .spacedRepetitionAnswer {
-            .node-card-item {
-                &[data-rem-container-tags~="callout"],
-                &[data-rem-container-tags~="calloutred"],
-                &[data-rem-container-tags~="calloutorange"],
-                &[data-rem-container-tags~="calloutyellow"],
-                &[data-rem-container-tags~="calloutgreen"],
-                &[data-rem-container-tags~="calloutblue"],
-                &[data-rem-container-tags~="calloutpurple"] {
-                    margin-left: var(--callout-margin-left);
-                }
-            }
-        }
-// Tag Declutter
-    [data-rem-container-tags~="callout"],
-    [data-rem-container-tags~="calloutred"],
-    [data-rem-container-tags~="calloutorange"],
-    [data-rem-container-tags~="calloutyellow"],
-    [data-rem-container-tags~="calloutgreen"],
-    [data-rem-container-tags~="calloutblue"],
-    [data-rem-container-tags~="calloutpurple"] {
         .float-end {
+            // Tag Declutter
             .hierarchy-editor__tag-bar {
                 span.hierarchy-editor__tag-bar__tag {
-                    background-color: transparent !important;
+                    background: transparent !important;
 
                     > div:first-of-type,
                     > span {
@@ -310,3 +134,200 @@
             }
         }
     }
+// Custom rem bullet Emoji
+    [data-rem-tags~="callout"],
+    [data-rem-tags~="calloutred"],
+    [data-rem-tags~="calloutorange"],
+    [data-rem-tags~="calloutyellow"],
+    [data-rem-tags~="calloutgreen"],
+    [data-rem-tags~="calloutblue"],
+    [data-rem-tags~="calloutpurple"] {
+        .rem-text {
+            .EditorContainer {
+                [data-rem-tags~="emoji"] {
+                    span.emoji-powerup {
+                        position: absolute;
+                        left: -1.5rem;
+                        z-index: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+
+@mixin Callout(
+    $cout-bg,
+    $cout-text,
+    $cout-text-bold,
+    $cout-rd-bg,
+    $cout-rd-text,
+    $cout-rd-text-bold,
+    $cout-or-bg,
+    $cout-or-text,
+    $cout-or-text-bold,
+    $cout-yw-bg,
+    $cout-yw-text,
+    $cout-yw-text-bold,
+    $cout-gr-bg,
+    $cout-gr-text,
+    $cout-gr-text-bold,
+    $cout-bl-bg,
+    $cout-bl-text,
+    $cout-bl-text-bold,
+    $cout-vt-bg,
+    $cout-vt-text,
+    $cout-vt-text-bold
+) {
+    [data-rem-container-tags~="callout"] {
+        background: $cout-bg;
+
+        > div {
+            > span:first-child {
+                background-color: unset;
+            }
+        }
+        .bold {
+            color: $cout-text-bold;
+            font-weight: 600;
+        }
+        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--red[data-rem-tags~="callout"]:only-child) {
+            color: $cout-rd-text;
+            background: $cout-rd-bg;
+            .bold {
+                color: $cout-rd-text-bold;
+                font-weight: 600;
+            }
+        }
+        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--orange[data-rem-tags~="callout"]:only-child) {
+            color: $cout-or-text;
+            background: $cout-or-bg;
+            .bold {
+                color: $cout-or-text-bold;
+                font-weight: 600;
+            }
+        }
+        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--yellow[data-rem-tags~="callout"]:only-child) {
+            color: $cout-yw-text;
+            background: $cout-yw-bg;
+            .bold {
+                color: $cout-yw-text-bold;
+                font-weight: 600;
+            }
+        }
+        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--green[data-rem-tags~="callout"]:only-child) {
+            color: $cout-gr-text;
+            background: $cout-gr-bg;
+            .bold {
+                color: $cout-gr-text-bold;
+                font-weight: 600;
+            }
+        }
+        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--blue[data-rem-tags~="callout"]:only-child) {
+            color: $cout-bl-text;
+            background: $cout-bl-bg;
+            .bold {
+                color: $cout-bl-text-bold;
+                font-weight: 600;
+            }
+        }
+        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--purple[data-rem-tags~="callout"]:only-child) {
+            color: $cout-vt-text;
+            background: $cout-vt-bg;
+            .bold {
+                color: $cout-vt-text-bold;
+                font-weight: 600;
+            }
+        }
+    }
+    [data-rem-container-tags~="calloutred"] {
+        color: $cout-rd-text;
+        background: $cout-rd-bg;
+        .bold {
+            color: $cout-rd-text-bold;
+        }
+    }
+    [data-rem-container-tags~="calloutorange"] {
+        color: $cout-or-text;
+        background: $cout-or-bg;
+        .bold {
+            color: $cout-or-text-bold;
+        }
+    }
+    [data-rem-container-tags~="calloutyellow"] {
+        color: $cout-yw-text; 
+        background: $cout-yw-bg;
+        .bold {
+            color: $cout-yw-text-bold;
+        }
+    }
+    [data-rem-container-tags~="calloutgreen"] {
+        color: $cout-gr-text;
+        background: $cout-gr-bg;
+        .bold {
+            color: $cout-gr-text-bold;
+        }
+    }
+    [data-rem-container-tags~="calloutblue"] {
+        color: $cout-bl-text;
+        background: $cout-bl-bg;
+        .bold {
+            color: $cout-bl-text-bold;
+        }
+    }
+    [data-rem-container-tags~="calloutpurple"] {
+        color: $cout-vt-text;
+        background: $cout-vt-bg;
+        .bold {
+            color: $cout-vt-text-bold;
+        }
+    }
+} 
+@include Callout(
+    var(--cout-bg), 
+    var(--cout-text), 
+    initial,
+    var(--cout-rd-bg), 
+    var(--cout-rd-text), 
+    initial,
+    var(--cout-or-bg), 
+    var(--cout-or-text), 
+    initial,
+    var(--cout-yw-bg), 
+    var(--cout-yw-text), 
+    initial,
+    var(--cout-gr-bg), 
+    var(--cout-gr-text), 
+    initial,
+    var(--cout-bl-bg), 
+    var(--cout-bl-text), 
+    initial,
+    var(--cout-vt-bg), 
+    var(--cout-vt-text),
+    initial
+);
+.dark {
+    @include Callout(
+        var(--cout-bg-dark), 
+        var(--cout-text-dark), 
+        var(--cout-text-bold-dark),
+        var(--cout-rd-bg-dark), 
+        var(--cout-rd-text-dark), 
+        var(--cout-rd-text-bold-dark), 
+        var(--cout-or-bg-dark), 
+        var(--cout-or-text-dark), 
+        var(--cout-or-text-bold-dark), 
+        var(--cout-yw-bg-dark), 
+        var(--cout-yw-text-dark), 
+        var(--cout-yw-text-bold-dark), 
+        var(--cout-gr-bg-dark), 
+        var(--cout-gr-text-dark), 
+        var(--cout-gr-text-bold-dark), 
+        var(--cout-bl-bg-dark), 
+        var(--cout-bl-text-dark), 
+        var(--cout-bl-text-bold-dark), 
+        var(--cout-vt-bg-dark), 
+        var(--cout-vt-text-dark),
+        var(--cout-vt-text-bold-dark)
+    );
+}
