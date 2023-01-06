@@ -1,6 +1,6 @@
 :root {
     --cout-bg: #F7F6F3;
-    --cout-bg-dark: #505050;
+    --cout-bg-dark: #444;
     --cout-text: #000;
     --cout-text-dark: #DFDFD5;
     --cout-text-bold-dark: #FFF;
@@ -182,8 +182,28 @@
     [data-rem-container-tags~="callout"] {
         background: $cout-bg;
 
+        &:has([data-rem-tags~="callout"].highlight-color--red) {
+            background: $cout-rd-bg;
+        }
+        &:has([data-rem-tags~="callout"].highlight-color--orange) {
+            background: $cout-or-bg;
+        }
+        &:has([data-rem-tags~="callout"].highlight-color--yellow) {
+            background: $cout-yw-bg;
+        }
+        &:has([data-rem-tags~="callout"].highlight-color--green) {
+            background: $cout-gr-bg;
+        }
+        &:has([data-rem-tags~="callout"].highlight-color--blue) {
+            background: $cout-bl-bg;
+        }
+        &:has([data-rem-tags~="callout"].highlight-color--purple) {
+            background: $cout-vt-bg;
+        }
+
         > div {
-            > span:first-child {
+            > span:first-child,
+            > .rem:only-child {
                 background-color: unset;
             }
         }
