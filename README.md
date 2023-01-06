@@ -6,20 +6,22 @@ Decorate your important rem texts with a simple but aesthetic box!
 
 |Color|Tag Name|
 |---|---|
-|basic|`callout` (color-convertible)|
-|red|`calloutred`|
-|orange|`calloutorange` |
-|yellow|`calloutyellow`|
-|green|`calloutgreen`|
-|blue|`calloutblue`|
-|purple|`calloutpurple`|
-
-## Feature
-- "The basic `callout` tag can be color-converted to the highlight color.
-- Simple Tag entries like `callout`, `calloutred`, ... can make callout box
-- Also, You can add a emoji in front of the Callout texts with simple `%%` typing
+|basic|`Callout` (color-convertible)|
+|red|`Calloutred` (fixed color)|
+|orange|`Calloutorange` (fixed color)|
+|yellow|`Calloutyellow` (fixed color)|
+|green|`Calloutgreen` (fixed color)|
+|blue|`Calloutblue` (fixed color)|
+|purple|`Calloutpurple` (fixed color)|
 
 ## Usage
+- Slash command `/` or `//` → type `ca`
+- Tag entries like `callout`, `calloutred`, ... can also make a Callout box
+## Feature
+- The basic `Callout` block can be color-convertible using the highlight colors.
+- Also, You can add a emoji in front of the Callout texts with simple `%%` typing
+
+## Display
 
 ![1](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/callout.png)
 ![1](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/callout-dark.png)
