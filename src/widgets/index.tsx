@@ -2,9 +2,7 @@ import { declareIndexPlugin, ReactRNPlugin } from "@remnote/plugin-sdk";
 
 export const CALLOUT_POWERUP = "callout_powerup";
 
-async function onActivate(plugin: ReactRNPlugin) { 
-  await plugin.app.toast('🟥🟧🟨🟩🟦🟪 Callout Refreshed!!');
-  
+async function onActivate(plugin: ReactRNPlugin) {   
   await plugin.app.registerPowerup(
     'Callout',
     CALLOUT_POWERUP,
