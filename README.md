@@ -17,6 +17,7 @@ Decorate your important rem texts with a simple but aesthetic box!
 ## Usage
 - Slash command `/` or `//` → type `ca`
 - Tag entries like `callout`, `calloutred`, ... can also make a Callout box
+
 ## Feature
 - The basic `Callout` block can be color-convertible using the highlight colors.
 - Also, You can add a emoji in front of the Callout texts with simple `%%` typing
