@@ -306,25 +306,25 @@
 @include Callout(
     var(--cout-bg), 
     var(--cout-text), 
-    initial,
+    inherit,
     var(--cout-rd-bg), 
     var(--cout-rd-text), 
-    initial,
+    inherit,
     var(--cout-or-bg), 
     var(--cout-or-text), 
-    initial,
+    inherit,
     var(--cout-yw-bg), 
     var(--cout-yw-text), 
-    initial,
+    inherit,
     var(--cout-gr-bg), 
     var(--cout-gr-text), 
-    initial,
+    inherit,
     var(--cout-bl-bg), 
     var(--cout-bl-text), 
-    initial,
+    inherit,
     var(--cout-vt-bg), 
     var(--cout-vt-text),
-    initial
+    inherit
 );
 .dark {
     @include Callout(
