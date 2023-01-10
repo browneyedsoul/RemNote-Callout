@@ -4,6 +4,8 @@
     --cout-text: #000;
     --cout-text-dark: #DFDFD5;
     --cout-text-bold-dark: #FFF;
+    --cout-tw-bold: 700;
+    --cout-tw-bold-dark: 600;
     --cout-rd-bg: #FFEEF0;
     --cout-rd-bg-dark: #4F201B;
     --cout-rd-text: #721C25;
@@ -160,6 +162,7 @@
     $cout-bg,
     $cout-text,
     $cout-text-bold,
+    $cout-tw-bold,
     $cout-rd-bg,
     $cout-rd-text,
     $cout-rd-text-bold,
@@ -208,15 +211,15 @@
             }
         }
         .bold {
-            color: $cout-text-bold;
-            font-weight: 600;
+            color: $cout-tw-bold;
+            font-weight: $cout-tw-bold;
         }
         &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--red[data-rem-tags~="callout"]:only-child) {
             color: $cout-rd-text;
             background: $cout-rd-bg;
             .bold {
                 color: $cout-rd-text-bold;
-                font-weight: 600;
+                font-weight: $cout-tw-bold;
             }
         }
         &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--orange[data-rem-tags~="callout"]:only-child) {
@@ -224,7 +227,7 @@
             background: $cout-or-bg;
             .bold {
                 color: $cout-or-text-bold;
-                font-weight: 600;
+                font-weight: $cout-tw-bold;
             }
         }
         &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--yellow[data-rem-tags~="callout"]:only-child) {
@@ -232,7 +235,7 @@
             background: $cout-yw-bg;
             .bold {
                 color: $cout-yw-text-bold;
-                font-weight: 600;
+                font-weight: $cout-tw-bold;
             }
         }
         &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--green[data-rem-tags~="callout"]:only-child) {
@@ -240,7 +243,7 @@
             background: $cout-gr-bg;
             .bold {
                 color: $cout-gr-text-bold;
-                font-weight: 600;
+                font-weight: $cout-tw-bold;
             }
         }
         &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--blue[data-rem-tags~="callout"]:only-child) {
@@ -248,7 +251,7 @@
             background: $cout-bl-bg;
             .bold {
                 color: $cout-bl-text-bold;
-                font-weight: 600;
+                font-weight: $cout-tw-bold;
             }
         }
         &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--purple[data-rem-tags~="callout"]:only-child) {
@@ -256,7 +259,7 @@
             background: $cout-vt-bg;
             .bold {
                 color: $cout-vt-text-bold;
-                font-weight: 600;
+                font-weight: $cout-tw-bold;
             }
         }
     }
@@ -265,6 +268,7 @@
         background: $cout-rd-bg;
         .bold {
             color: $cout-rd-text-bold;
+            font-weight: $cout-tw-bold;
         }
     }
     [data-rem-container-tags~="calloutorange"] {
@@ -272,6 +276,7 @@
         background: $cout-or-bg;
         .bold {
             color: $cout-or-text-bold;
+            font-weight: $cout-tw-bold;
         }
     }
     [data-rem-container-tags~="calloutyellow"] {
@@ -279,6 +284,7 @@
         background: $cout-yw-bg;
         .bold {
             color: $cout-yw-text-bold;
+            font-weight: $cout-tw-bold;
         }
     }
     [data-rem-container-tags~="calloutgreen"] {
@@ -286,6 +292,7 @@
         background: $cout-gr-bg;
         .bold {
             color: $cout-gr-text-bold;
+            font-weight: $cout-tw-bold;
         }
     }
     [data-rem-container-tags~="calloutblue"] {
@@ -293,6 +300,7 @@
         background: $cout-bl-bg;
         .bold {
             color: $cout-bl-text-bold;
+            font-weight: $cout-tw-bold;
         }
     }
     [data-rem-container-tags~="calloutpurple"] {
@@ -300,6 +308,7 @@
         background: $cout-vt-bg;
         .bold {
             color: $cout-vt-text-bold;
+            font-weight: $cout-tw-bold;
         }
     }
 } 
@@ -307,6 +316,7 @@
     var(--cout-bg), 
     var(--cout-text), 
     inherit,
+    var(--cout-tw-bold),
     var(--cout-rd-bg), 
     var(--cout-rd-text), 
     inherit,
@@ -331,6 +341,7 @@
         var(--cout-bg-dark), 
         var(--cout-text-dark), 
         var(--cout-text-bold-dark),
+        var(--cout-tw-bold-dark),
         var(--cout-rd-bg-dark), 
         var(--cout-rd-text-dark), 
         var(--cout-rd-text-bold-dark), 
