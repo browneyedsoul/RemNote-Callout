@@ -1,12 +1,12 @@
 {
   "author": {
-    "name" : "Min-Ki Park",
-    "email" : "contact@browneyedsoul.click",
-    "url" : "https://browneyedsoul.click/"
+    "name": "Min-Ki Park",
+    "email": "contact@browneyedsoul.click",
+    "url": "https://browneyedsoul.click/"
   },
   "private": true,
   "name": "remnote-callout",
-  "version": "1.0.4",
+  "version": "1.2.0",
   "license": "MIT",
   "scripts": {
     "check-types": "tsc",
@@ -35,7 +35,7 @@
     "postcss": "^8.4.14",
     "postcss-import": "^14.1.0",
     "postcss-loader": "^7.0.0",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.2",
     "react-refresh": "^0.14.0",
     "shx": "^0.3.4",
     "tailwindcss": "^3.1.5",
