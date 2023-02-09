@@ -157,6 +157,23 @@
             }
         }
     }
+[data-document-tags~="callout"],
+[data-document-tags~="calloutred"],
+[data-document-tags~="calloutorange"],
+[data-document-tags~="calloutyellow"],
+[data-document-tags~="calloutgreen"],
+[data-document-tags~="calloutblue"],
+[data-document-tags~="calloutpurple"] {
+    #hierarchy-editor-inner {
+        > div {
+            > div:last-child {
+                > div:not([data-rem-container-id]) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
 
 @mixin Callout(
     $cout-bg,
