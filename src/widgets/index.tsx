@@ -18,7 +18,18 @@ export const [
   "calloutpurple_powerup",
 ];
 
+let CalloutCSS: string;
+
 async function onActivate(plugin: ReactRNPlugin) {
+  await fetch("https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/src/snippet.css")
+    .then((response) => response.text())
+    .then((text) => {
+      CalloutCSS = text;
+      console.log("Callout!");
+    })
+    .catch((error) => console.error(error));
+  await plugin.app.registerCSS("callout", CalloutCSS);
+
   await plugin.app.registerPowerup("Callout", CALLOUT_POWERUP, "Basic", { slots: [] });
   await plugin.app.registerPowerup("CalloutRed", CALLOUTRD_POWERUP, "Basic", { slots: [] });
   await plugin.app.registerPowerup("CalloutOrange", CALLOUTOR_POWERUP, "Basic", { slots: [] });
