@@ -4,19 +4,19 @@ Decorate your important rem texts with a simple but aesthetic box!
 
 ## Available Tags
 
-|Color|Tag Name|
-|---|---|
-|basic|`Callout` (color-convertible)|
-|red|`Calloutred` (fixed color)|
-|orange|`Calloutorange` (fixed color)|
-|yellow|`Calloutyellow` (fixed color)|
-|green|`Calloutgreen` (fixed color)|
-|blue|`Calloutblue` (fixed color)|
-|purple|`Calloutpurple` (fixed color)|
+|Color|Tag Name|quick entry|Shortcut|
+|---|---|---|---|
+|basic|`Callout` (color-convertible)|`ca`|Ctrl+Alt(⌥)+0|
+|red|`Calloutred` (fixed color)|`car`|Ctrl+Alt(⌥)+4|
+|orange|`Calloutorange` (fixed color)|`cao`|Ctrl+Alt(⌥)+5|
+|yellow|`Calloutyellow` (fixed color)|`cay`|Ctrl+Alt(⌥)+6|
+|green|`Calloutgreen` (fixed color)|`cag`|Ctrl+Alt(⌥)+7|
+|blue|`Calloutblue` (fixed color)|`cab`|Ctrl+Alt(⌥)+8|
+|purple|`Calloutpurple` (fixed color)|`cav`|Ctrl+Alt(⌥)+9|
 
 ## Usage
-- Slash command `/` or `//` → type `ca`
-- Tag entries like `callout`, `calloutred`, ... can also make a Callout box
+- Using Shortcuts
+- Omnibar/Slash command → type `ca`, `car`, `cao`, `cay`, `cag`, `cab`, `cav`
 
 ## Feature
 - The basic `Callout` block can be color-convertible using the highlight colors.
@@ -26,6 +26,3 @@ Decorate your important rem texts with a simple but aesthetic box!
 
 ![1](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/callout.png)
 ![1](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/callout-dark.png)
-![1](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/1.png)
-![2](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/2.png)
-![3](https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/public/3.png)
