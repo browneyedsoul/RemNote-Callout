@@ -42,12 +42,12 @@ async function onActivate(plugin: ReactRNPlugin) {
   }
 
   await plugin.app.registerPowerup("Callout", CALLOUT_POWERUP, "Callout Basic", { slots: [] });
-  await plugin.app.registerPowerup("CalloutRed", CALLOUTRD_POWERUP, "Callout Red", { slots: [] });
-  await plugin.app.registerPowerup("CalloutOrange", CALLOUTOR_POWERUP, "Callout Orange", { slots: [] });
-  await plugin.app.registerPowerup("CalloutYellow", CALLOUTYW_POWERUP, "Callout Yellow", { slots: [] });
-  await plugin.app.registerPowerup("CalloutGreen", CALLOUTGR_POWERUP, "Callout Green", { slots: [] });
-  await plugin.app.registerPowerup("CalloutBlue", CALLOUTBL_POWERUP, "Callout Blue", { slots: [] });
-  await plugin.app.registerPowerup("CalloutPurple", CALLOUTVT_POWERUP, "Callout Purple", { slots: [] });
+  await plugin.app.registerPowerup("Callout Red", CALLOUTRD_POWERUP, "Callout Red", { slots: [] });
+  await plugin.app.registerPowerup("Callout Orange", CALLOUTOR_POWERUP, "Callout Orange", { slots: [] });
+  await plugin.app.registerPowerup("Callout Yellow", CALLOUTYW_POWERUP, "Callout Yellow", { slots: [] });
+  await plugin.app.registerPowerup("Callout Green", CALLOUTGR_POWERUP, "Callout Green", { slots: [] });
+  await plugin.app.registerPowerup("Callout Blue", CALLOUTBL_POWERUP, "Callout Blue", { slots: [] });
+  await plugin.app.registerPowerup("Callout Purple", CALLOUTVT_POWERUP, "Callout Purple", { slots: [] });
 
   await plugin.app.registerCommand({
     id: "basic",
