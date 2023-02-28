@@ -29,6 +29,7 @@ async function onActivate(plugin: ReactRNPlugin) {
         console.log("Callout installed");
       })
       .catch((error) => console.error(error));
+    await plugin.app.registerCSS("callout", CalloutCSS);
   } catch (error) {
     await fetch("https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/src/snippet.css")
       .then((response) => response.text())
@@ -36,9 +37,9 @@ async function onActivate(plugin: ReactRNPlugin) {
         CalloutCSS = text;
         console.log("Callout installed from cdn");
       })
-      .catch((error) => console.error(error)); 
+      .catch((error) => console.error(error));
+    await plugin.app.registerCSS("callout", CalloutCSS);
   }
-  await plugin.app.registerCSS("callout", CalloutCSS);
 
   await plugin.app.registerPowerup("Callout", CALLOUT_POWERUP, "Callout Basic", { slots: [] });
   await plugin.app.registerPowerup("CalloutRed", CALLOUTRD_POWERUP, "Callout Red", { slots: [] });
