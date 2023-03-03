@@ -53,12 +53,12 @@
 // Alignment
     // Card Item Callout
     .node-card-item[data-rem-container-tags~="callout"],
-    .node-card-item[data-rem-container-tags~="calloutred"],
-    .node-card-item[data-rem-container-tags~="calloutorange"],
-    .node-card-item[data-rem-container-tags~="calloutyellow"],
-    .node-card-item[data-rem-container-tags~="calloutgreen"],
-    .node-card-item[data-rem-container-tags~="calloutblue"],
-    .node-card-item[data-rem-container-tags~="calloutpurple"] {
+    .node-card-item[data-rem-container-tags~="callout-red"],
+    .node-card-item[data-rem-container-tags~="callout-orange"],
+    .node-card-item[data-rem-container-tags~="callout-yellow"],
+    .node-card-item[data-rem-container-tags~="callout-green"],
+    .node-card-item[data-rem-container-tags~="callout-blue"],
+    .node-card-item[data-rem-container-tags~="callout-purple"] {
         &::before {
             top: -10px;
             left: -24px;
@@ -69,24 +69,24 @@
     .spacedRepetitionAnswer {
         .node-card-item {
             &[data-rem-container-tags~="callout"],
-            &[data-rem-container-tags~="calloutred"],
-            &[data-rem-container-tags~="calloutorange"],
-            &[data-rem-container-tags~="calloutyellow"],
-            &[data-rem-container-tags~="calloutgreen"],
-            &[data-rem-container-tags~="calloutblue"],
-            &[data-rem-container-tags~="calloutpurple"] {
+            &[data-rem-container-tags~="callout-red"],
+            &[data-rem-container-tags~="callout-orange"],
+            &[data-rem-container-tags~="callout-yellow"],
+            &[data-rem-container-tags~="callout-green"],
+            &[data-rem-container-tags~="callout-blue"],
+            &[data-rem-container-tags~="callout-purple"] {
                 margin-left: var(--cout-margin-left);
             }
         }
     }
 // Callout Rem Block Color-Variable & Pre-Coloured
     [data-rem-container-tags~="callout"],
-    [data-rem-container-tags~="calloutred"],
-    [data-rem-container-tags~="calloutorange"],
-    [data-rem-container-tags~="calloutyellow"],
-    [data-rem-container-tags~="calloutgreen"],
-    [data-rem-container-tags~="calloutblue"],
-    [data-rem-container-tags~="calloutpurple"] {
+    [data-rem-container-tags~="callout-red"],
+    [data-rem-container-tags~="callout-orange"],
+    [data-rem-container-tags~="callout-yellow"],
+    [data-rem-container-tags~="callout-green"],
+    [data-rem-container-tags~="callout-blue"],
+    [data-rem-container-tags~="callout-purple"] {
         padding: var(--cout-padding);
         margin-top: var(--cout-margin-top);
         margin-bottom: var(--cout-margin-bottom);
@@ -138,12 +138,12 @@
     }
 // Custom rem bullet Emoji
     [data-rem-tags~="callout"],
-    [data-rem-tags~="calloutred"],
-    [data-rem-tags~="calloutorange"],
-    [data-rem-tags~="calloutyellow"],
-    [data-rem-tags~="calloutgreen"],
-    [data-rem-tags~="calloutblue"],
-    [data-rem-tags~="calloutpurple"] {
+    [data-rem-tags~="callout-red"],
+    [data-rem-tags~="callout-orange"],
+    [data-rem-tags~="callout-yellow"],
+    [data-rem-tags~="callout-green"],
+    [data-rem-tags~="callout-blue"],
+    [data-rem-tags~="callout-purple"] {
         .rem-text {
             .EditorContainer {
                 [data-rem-tags~="emoji"] {
@@ -158,12 +158,12 @@
         }
     }
 [data-document-tags~="callout"],
-[data-document-tags~="calloutred"],
-[data-document-tags~="calloutorange"],
-[data-document-tags~="calloutyellow"],
-[data-document-tags~="calloutgreen"],
-[data-document-tags~="calloutblue"],
-[data-document-tags~="calloutpurple"] {
+[data-document-tags~="callout-red"],
+[data-document-tags~="callout-orange"],
+[data-document-tags~="callout-yellow"],
+[data-document-tags~="callout-green"],
+[data-document-tags~="callout-blue"],
+[data-document-tags~="callout-purple"] {
     #hierarchy-editor-inner {
         > div {
             > div:last-child {
@@ -280,7 +280,7 @@
             }
         }
     }
-    [data-rem-container-tags~="calloutred"] {
+    [data-rem-container-tags~="callout-red"] {
         color: $cout-rd-text;
         background: $cout-rd-bg;
         .bold {
@@ -288,7 +288,7 @@
             font-weight: $cout-tw-bold;
         }
     }
-    [data-rem-container-tags~="calloutorange"] {
+    [data-rem-container-tags~="callout-orange"] {
         color: $cout-or-text;
         background: $cout-or-bg;
         .bold {
@@ -296,7 +296,7 @@
             font-weight: $cout-tw-bold;
         }
     }
-    [data-rem-container-tags~="calloutyellow"] {
+    [data-rem-container-tags~="callout-yellow"] {
         color: $cout-yw-text; 
         background: $cout-yw-bg;
         .bold {
@@ -304,7 +304,7 @@
             font-weight: $cout-tw-bold;
         }
     }
-    [data-rem-container-tags~="calloutgreen"] {
+    [data-rem-container-tags~="callout-green"] {
         color: $cout-gr-text;
         background: $cout-gr-bg;
         .bold {
@@ -312,7 +312,7 @@
             font-weight: $cout-tw-bold;
         }
     }
-    [data-rem-container-tags~="calloutblue"] {
+    [data-rem-container-tags~="callout-blue"] {
         color: $cout-bl-text;
         background: $cout-bl-bg;
         .bold {
@@ -320,7 +320,7 @@
             font-weight: $cout-tw-bold;
         }
     }
-    [data-rem-container-tags~="calloutpurple"] {
+    [data-rem-container-tags~="callout-purple"] {
         color: $cout-vt-text;
         background: $cout-vt-bg;
         .bold {
