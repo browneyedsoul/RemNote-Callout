@@ -46,15 +46,12 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { url: false } },
-          'postcss-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { url: false } }, 'postcss-loader'],
       },
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       templateContent: `
       <body></body>
@@ -85,10 +82,10 @@ const config = {
     }),
     new CopyPlugin({
       patterns: [
-        {from: 'public', to: ''},
-        {from: 'README.md', to: ''},
-        {from: 'src/snippet.css', to: ''}
-      ]
+        { from: 'public', to: '' },
+        { from: 'README.md', to: '' },
+        { from: 'src/snippet.css', to: '' },
+      ],
     }),
     fastRefresh,
   ].filter(Boolean),

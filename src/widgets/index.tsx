@@ -22,18 +22,21 @@ let CalloutCSS: string;
 
 async function onActivate(plugin: ReactRNPlugin) {
   try {
-    const localResponse = await fetch("snippet.css");
-    const localCSS = await localResponse.text();
-    CalloutCSS = localCSS;
-    console.dir("Callout Installed!");
+    await fetch("snippet.css")
+      .then((response) => response.text())
+      .then((text) => {
+        CalloutCSS = text;
+        console.dir("Callout plugin installed from local");
+      })
+      .catch((error) => console.error(error));
   } catch (localError) {
-    console.warn(`Failed to fetch local file: ${localError}. Falling back to remote URL.`);
-    const remoteResponse = await fetch(
-      "https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/src/snippet.css"
-    );
-    const remoteCSS = await remoteResponse.text();
-    CalloutCSS = remoteCSS;
-    console.dir("Callout Installed from CDN!");
+    await fetch("https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/src/snippet.css")
+      .then((response) => response.text())
+      .then((text) => {
+        CalloutCSS = text;
+        console.dir("Callout plugin installed from cdn");
+      })
+      .catch((error) => console.error(error));
   }
 
   await plugin.app.registerPowerup("Callout", CALLOUT_POWERUP, "Callout Basic", { slots: [] });
