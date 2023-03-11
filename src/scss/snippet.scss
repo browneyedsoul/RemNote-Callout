@@ -199,39 +199,89 @@
     $cout-vt-text,
     $cout-vt-text-bold
 ) {
-    [data-rem-container-tags~="callout"] {
-        background: $cout-bg;
+    %Callout {
+        [data-rem-container-tags~="callout"] {
+            background: $cout-bg;
 
-        &:has([data-rem-tags~="callout"].highlight-color--red) {
-            background: $cout-rd-bg;
-        }
-        &:has([data-rem-tags~="callout"].highlight-color--orange) {
-            background: $cout-or-bg;
-        }
-        &:has([data-rem-tags~="callout"].highlight-color--yellow) {
-            background: $cout-yw-bg;
-        }
-        &:has([data-rem-tags~="callout"].highlight-color--green) {
-            background: $cout-gr-bg;
-        }
-        &:has([data-rem-tags~="callout"].highlight-color--blue) {
-            background: $cout-bl-bg;
-        }
-        &:has([data-rem-tags~="callout"].highlight-color--purple) {
-            background: $cout-vt-bg;
-        }
+            &:has([data-rem-tags~="callout"].highlight-color--red) {
+                background: $cout-rd-bg;
+            }
+            &:has([data-rem-tags~="callout"].highlight-color--orange) {
+                background: $cout-or-bg;
+            }
+            &:has([data-rem-tags~="callout"].highlight-color--yellow) {
+                background: $cout-yw-bg;
+            }
+            &:has([data-rem-tags~="callout"].highlight-color--green) {
+                background: $cout-gr-bg;
+            }
+            &:has([data-rem-tags~="callout"].highlight-color--blue) {
+                background: $cout-bl-bg;
+            }
+            &:has([data-rem-tags~="callout"].highlight-color--purple) {
+                background: $cout-vt-bg;
+            }
 
-        > div {
-            > span:first-child,
-            > .rem:only-child {
-                background-color: unset;
+            > div {
+                > span:first-child,
+                > .rem:only-child {
+                    background-color: unset;
+                }
+            }
+            .bold {
+                color: $cout-tw-bold;
+                font-weight: $cout-tw-bold;
+            }
+            &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--red[data-rem-tags~="callout"]:only-child) {
+                color: $cout-rd-text;
+                background: $cout-rd-bg;
+                .bold {
+                    color: $cout-rd-text-bold;
+                    font-weight: $cout-tw-bold;
+                }
+            }
+            &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--orange[data-rem-tags~="callout"]:only-child) {
+                color: $cout-or-text;
+                background: $cout-or-bg;
+                .bold {
+                    color: $cout-or-text-bold;
+                    font-weight: $cout-tw-bold;
+                }
+            }
+            &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--yellow[data-rem-tags~="callout"]:only-child) {
+                color: $cout-yw-text;
+                background: $cout-yw-bg;
+                .bold {
+                    color: $cout-yw-text-bold;
+                    font-weight: $cout-tw-bold;
+                }
+            }
+            &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--green[data-rem-tags~="callout"]:only-child) {
+                color: $cout-gr-text;
+                background: $cout-gr-bg;
+                .bold {
+                    color: $cout-gr-text-bold;
+                    font-weight: $cout-tw-bold;
+                }
+            }
+            &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--blue[data-rem-tags~="callout"]:only-child) {
+                color: $cout-bl-text;
+                background: $cout-bl-bg;
+                .bold {
+                    color: $cout-bl-text-bold;
+                    font-weight: $cout-tw-bold;
+                }
+            }
+            &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--purple[data-rem-tags~="callout"]:only-child) {
+                color: $cout-vt-text;
+                background: $cout-vt-bg;
+                .bold {
+                    color: $cout-vt-text-bold;
+                    font-weight: $cout-tw-bold;
+                }
             }
         }
-        .bold {
-            color: $cout-tw-bold;
-            font-weight: $cout-tw-bold;
-        }
-        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--red[data-rem-tags~="callout"]:only-child) {
+        [data-rem-container-tags~="callout-red"] {
             color: $cout-rd-text;
             background: $cout-rd-bg;
             .bold {
@@ -239,7 +289,7 @@
                 font-weight: $cout-tw-bold;
             }
         }
-        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--orange[data-rem-tags~="callout"]:only-child) {
+        [data-rem-container-tags~="callout-orange"] {
             color: $cout-or-text;
             background: $cout-or-bg;
             .bold {
@@ -247,15 +297,15 @@
                 font-weight: $cout-tw-bold;
             }
         }
-        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--yellow[data-rem-tags~="callout"]:only-child) {
-            color: $cout-yw-text;
+        [data-rem-container-tags~="callout-yellow"] {
+            color: $cout-yw-text; 
             background: $cout-yw-bg;
             .bold {
                 color: $cout-yw-text-bold;
                 font-weight: $cout-tw-bold;
             }
         }
-        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--green[data-rem-tags~="callout"]:only-child) {
+        [data-rem-container-tags~="callout-green"] {
             color: $cout-gr-text;
             background: $cout-gr-bg;
             .bold {
@@ -263,7 +313,7 @@
                 font-weight: $cout-tw-bold;
             }
         }
-        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--blue[data-rem-tags~="callout"]:only-child) {
+        [data-rem-container-tags~="callout-blue"] {
             color: $cout-bl-text;
             background: $cout-bl-bg;
             .bold {
@@ -271,7 +321,7 @@
                 font-weight: $cout-tw-bold;
             }
         }
-        &[data-rem-container-tags~="highlight"]:has(.tree-node--parent > span.highlight-color--purple[data-rem-tags~="callout"]:only-child) {
+        [data-rem-container-tags~="callout-purple"] {
             color: $cout-vt-text;
             background: $cout-vt-bg;
             .bold {
@@ -280,52 +330,12 @@
             }
         }
     }
-    [data-rem-container-tags~="callout-red"] {
-        color: $cout-rd-text;
-        background: $cout-rd-bg;
-        .bold {
-            color: $cout-rd-text-bold;
-            font-weight: $cout-tw-bold;
-        }
-    }
-    [data-rem-container-tags~="callout-orange"] {
-        color: $cout-or-text;
-        background: $cout-or-bg;
-        .bold {
-            color: $cout-or-text-bold;
-            font-weight: $cout-tw-bold;
-        }
-    }
-    [data-rem-container-tags~="callout-yellow"] {
-        color: $cout-yw-text; 
-        background: $cout-yw-bg;
-        .bold {
-            color: $cout-yw-text-bold;
-            font-weight: $cout-tw-bold;
-        }
-    }
-    [data-rem-container-tags~="callout-green"] {
-        color: $cout-gr-text;
-        background: $cout-gr-bg;
-        .bold {
-            color: $cout-gr-text-bold;
-            font-weight: $cout-tw-bold;
-        }
-    }
-    [data-rem-container-tags~="callout-blue"] {
-        color: $cout-bl-text;
-        background: $cout-bl-bg;
-        .bold {
-            color: $cout-bl-text-bold;
-            font-weight: $cout-tw-bold;
-        }
-    }
-    [data-rem-container-tags~="callout-purple"] {
-        color: $cout-vt-text;
-        background: $cout-vt-bg;
-        .bold {
-            color: $cout-vt-text-bold;
-            font-weight: $cout-tw-bold;
+    #tile__document {
+        [data-rem-container-tags~="kanban"] {
+            @extend %Callout;
+            [data-rem-container-tags*="callout"] {
+                padding-bottom: 15px;
+            }
         }
     }
 } 
