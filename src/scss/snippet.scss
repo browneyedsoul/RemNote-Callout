@@ -333,6 +333,9 @@
     #tile__document {
         @extend %Callout;
     }
+    .rn-popup {
+        @extend %Callout;
+    }
     [data-rem-container-tags~="kanban"] {
         @extend %Callout;
         [data-rem-container-tags*="callout"] {
