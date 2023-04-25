@@ -8,14 +8,14 @@
   "manifestVersion": 1,
   "version": {
     "major": 1,
-    "minor": 5,
-    "patch": 2
+    "minor": 6,
+    "patch": 0
   },
   "requestNative": true,
   "requiredScopes": [
     {
       "type": "All",
-      "level": "ReadCreateModify"
+      "level": "ReadCreateModifyDelete"
     }
   ]
 }
