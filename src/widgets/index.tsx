@@ -22,21 +22,18 @@ let CalloutCSS: string;
 
 async function onActivate(plugin: ReactRNPlugin) {
   try {
-    await fetch("snippet.css")
-      .then((response) => response.text())
-      .then((text) => {
-        CalloutCSS = text;
-        console.dir("Callout plugin installed from local");
-      })
-      .catch((error) => console.error(error));
-  } catch (localError) {
-    await fetch("https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/src/snippet.css")
-      .then((response) => response.text())
-      .then((text) => {
-        CalloutCSS = text;
-        console.dir("Callout plugin installed from cdn");
-      })
-      .catch((error) => console.error(error));
+    const response = await fetch('snippet.css');
+    const text = await response.text();
+    CalloutCSS = text;
+    console.log('Callout plugin installed from local');
+  } catch (error) {
+    console.error(error);
+    const response = await fetch(
+      'https://raw.githubusercontent.com/browneyedsoul/RemNote-Callout/main/src/snippet.css'
+    );
+    const text = await response.text();
+    CalloutCSS = text;
+    console.log('Callout plugin installed from cdn');
   }
 
   await plugin.app.registerPowerup("Callout", CALLOUT_POWERUP, "Callout Basic", { slots: [] });
@@ -54,7 +51,17 @@ async function onActivate(plugin: ReactRNPlugin) {
     keyboardShortcut: "opt+ctrl+0",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CALLOUT_POWERUP);
+      if (rem?.hasPowerup) {
+        await rem?.removePowerup(CALLOUTRD_POWERUP);
+        await rem?.removePowerup(CALLOUTOR_POWERUP);
+        await rem?.removePowerup(CALLOUTYW_POWERUP);
+        await rem?.removePowerup(CALLOUTGR_POWERUP);
+        await rem?.removePowerup(CALLOUTBL_POWERUP);
+        await rem?.removePowerup(CALLOUTVT_POWERUP);
+        await rem?.addPowerup(CALLOUT_POWERUP);
+      } else {
+        await rem?.addPowerup(CALLOUT_POWERUP);
+      }
     },
   });
   await plugin.app.registerCommand({
@@ -64,7 +71,17 @@ async function onActivate(plugin: ReactRNPlugin) {
     keyboardShortcut: "opt+ctrl+4",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CALLOUTRD_POWERUP);
+      if (rem?.hasPowerup) {
+        await rem?.removePowerup(CALLOUT_POWERUP);
+        await rem?.removePowerup(CALLOUTOR_POWERUP);
+        await rem?.removePowerup(CALLOUTYW_POWERUP);
+        await rem?.removePowerup(CALLOUTGR_POWERUP);
+        await rem?.removePowerup(CALLOUTBL_POWERUP);
+        await rem?.removePowerup(CALLOUTVT_POWERUP);
+        await rem?.addPowerup(CALLOUTRD_POWERUP);
+      } else {
+        await rem?.addPowerup(CALLOUTRD_POWERUP);
+      }
     },
   });
   await plugin.app.registerCommand({
@@ -74,7 +91,17 @@ async function onActivate(plugin: ReactRNPlugin) {
     keyboardShortcut: "opt+ctrl+5",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CALLOUTOR_POWERUP);
+      if (rem?.hasPowerup) {
+        await rem?.removePowerup(CALLOUT_POWERUP);
+        await rem?.removePowerup(CALLOUTRD_POWERUP);
+        await rem?.removePowerup(CALLOUTYW_POWERUP);
+        await rem?.removePowerup(CALLOUTGR_POWERUP);
+        await rem?.removePowerup(CALLOUTBL_POWERUP);
+        await rem?.removePowerup(CALLOUTVT_POWERUP);
+        await rem?.addPowerup(CALLOUTOR_POWERUP);
+      } else {
+        await rem?.addPowerup(CALLOUTOR_POWERUP);
+      }
     },
   });
   await plugin.app.registerCommand({
@@ -84,7 +111,17 @@ async function onActivate(plugin: ReactRNPlugin) {
     keyboardShortcut: "opt+ctrl+6",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CALLOUTYW_POWERUP);
+      if (rem?.hasPowerup) {
+        await rem?.removePowerup(CALLOUT_POWERUP);
+        await rem?.removePowerup(CALLOUTRD_POWERUP);
+        await rem?.removePowerup(CALLOUTOR_POWERUP);
+        await rem?.removePowerup(CALLOUTGR_POWERUP);
+        await rem?.removePowerup(CALLOUTBL_POWERUP);
+        await rem?.removePowerup(CALLOUTVT_POWERUP);
+        await rem?.addPowerup(CALLOUTYW_POWERUP);
+      } else {
+        await rem?.addPowerup(CALLOUTYW_POWERUP);
+      }
     },
   });
   await plugin.app.registerCommand({
@@ -94,7 +131,17 @@ async function onActivate(plugin: ReactRNPlugin) {
     keyboardShortcut: "opt+ctrl+7",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CALLOUTGR_POWERUP);
+      if (rem?.hasPowerup) {
+        await rem?.removePowerup(CALLOUT_POWERUP);
+        await rem?.removePowerup(CALLOUTRD_POWERUP);
+        await rem?.removePowerup(CALLOUTOR_POWERUP);
+        await rem?.removePowerup(CALLOUTYW_POWERUP);
+        await rem?.removePowerup(CALLOUTBL_POWERUP);
+        await rem?.removePowerup(CALLOUTVT_POWERUP);
+        await rem?.addPowerup(CALLOUTGR_POWERUP);
+      } else {
+        await rem?.addPowerup(CALLOUTGR_POWERUP);
+      }
     },
   });
   await plugin.app.registerCommand({
@@ -104,7 +151,17 @@ async function onActivate(plugin: ReactRNPlugin) {
     keyboardShortcut: "opt+ctrl+8",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CALLOUTBL_POWERUP);
+      if (rem?.hasPowerup) {
+        await rem?.removePowerup(CALLOUT_POWERUP);
+        await rem?.removePowerup(CALLOUTRD_POWERUP);
+        await rem?.removePowerup(CALLOUTOR_POWERUP);
+        await rem?.removePowerup(CALLOUTYW_POWERUP);
+        await rem?.removePowerup(CALLOUTGR_POWERUP);
+        await rem?.removePowerup(CALLOUTVT_POWERUP);
+        await rem?.addPowerup(CALLOUTBL_POWERUP);
+      } else {
+        await rem?.addPowerup(CALLOUTBL_POWERUP);
+      }
     },
   });
   await plugin.app.registerCommand({
@@ -114,7 +171,17 @@ async function onActivate(plugin: ReactRNPlugin) {
     keyboardShortcut: "opt+ctrl+9",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CALLOUTVT_POWERUP);
+      if (rem?.hasPowerup) {
+        await rem?.removePowerup(CALLOUT_POWERUP);
+        await rem?.removePowerup(CALLOUTRD_POWERUP);
+        await rem?.removePowerup(CALLOUTOR_POWERUP);
+        await rem?.removePowerup(CALLOUTYW_POWERUP);
+        await rem?.removePowerup(CALLOUTGR_POWERUP);
+        await rem?.removePowerup(CALLOUTBL_POWERUP);
+        await rem?.addPowerup(CALLOUTVT_POWERUP);
+      } else {
+        await rem?.addPowerup(CALLOUTVT_POWERUP);
+      }
     },
   });
 }
